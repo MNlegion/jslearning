@@ -1,13 +1,28 @@
-const person = {
-    firstName: 'John',
-    lastName: 'Doe',
-    age: 20,
-    address: {
-        street: '123 Main St',
-        city: 'Boston',
-        state: 'MA'
-    },
-    hobbies: ['reading', 'music', 'movies'],
-}
+const todos = [
+  {
+    id: 1,
+    title: "My first todo",
+    completed: false,
+  },
+  {
+    id: 2,
+    title: "My second todo",
+    completed: false,
+  },
+  {
+    id: 3,
+    title: "My third todo",
+    completed: false,
+  },
+];
 
-console.log(person.hobbies[1]);
+// for (let todo of todos) {
+//   console.log(todo.id, todo.title, todo.completed);
+// }
+
+// forEach, map, filter, find, reduce
+
+// forEach
+todos.forEach(function (anything) {
+  console.log(anything.id, anything.title);
+});
