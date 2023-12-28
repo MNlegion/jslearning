@@ -23,6 +23,6 @@ const todos = [
 // forEach, map, filter, find, reduce
 
 // forEach
-todos.forEach(function (anything) {
-  console.log(anything.id, anything.title);
+todos.forEach(function (todo) {
+  console.log(todo.id, todo.title);
 });
