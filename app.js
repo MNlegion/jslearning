@@ -18,6 +18,17 @@ function computerChoice() {
     return choices[randomNumber];
 }
 
+// userChoice function
+function userChoice(userInput) {
+    if (userInput === 'rock') {
+        userText.textContent = 'You chose rock.';
+    } else if (userInput === 'paper') {
+        userText.textContent = 'You chose paper.';
+    } else if (userInput === 'scissors') {
+        userText.textContent = 'You chose scissors.';
+    }
+}
+
 // playRound function
 function playRound(userChoice, computerChoice) {
     if (userChoice === computerChoice) {
@@ -37,29 +48,25 @@ function playRound(userChoice, computerChoice) {
     }
 
     console.log('User choice: ' + userChoice);
+    console.log('Computer choice: ' + computerChoice);
 }
 
 // event listeners
+
 rockButton.addEventListener('click', () => {
+    userChoice('rock');
     playRound('rock', computerChoice());
-    userText.textContent = 'Rock';
-    computerText.textContent = computerChoice().charAt(0).toUpperCase() + computerChoice().slice(1);
 });
 
 paperButton.addEventListener('click', () => {
+    userChoice('paper');
     playRound('paper', computerChoice());
-    userText.textContent = 'Paper';
-    computerText.textContent = computerChoice().charAt(0).toUpperCase() + computerChoice().slice(1);
 });
 
 scissorsButton.addEventListener('click', () => {
+    userChoice('scissors');
     playRound('scissors', computerChoice());
-    userText.textContent = 'Scissors';
-    computerText.textContent = computerChoice().charAt(0).toUpperCase() + computerChoice().slice(1);
 });
 
-resetButton.addEventListener('click', () => {
-    result.textContent = '';
-});
 
 
